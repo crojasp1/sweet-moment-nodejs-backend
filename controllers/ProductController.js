@@ -24,16 +24,6 @@ export const getProduct = async(req, res)=>{
   }
 };
 
-  //crear un nuevo producto
-  export const createProduct = async(req, res)=>{
-    try{
-      await ProductModel.create(req.body);
-      res.status(200).json({"message":"Producto agregado con exito!"});
-    }catch(err){
-      res.json({message: err.message});
-    }
-  };
-
   //actualizar producto
 
   export const updateProduct = async(req, res)=>{
@@ -57,3 +47,15 @@ export const getProduct = async(req, res)=>{
       res.json({message: err.message});
     }
   };
+
+
+    //crear un nuevo producto
+  export const addproduct =  async (req, res) => {
+  try {
+    await ProductModel.create(req.body);
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.json({ success: false, message: err.message });
+  }
+};
