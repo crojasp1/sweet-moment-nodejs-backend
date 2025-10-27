@@ -10,7 +10,7 @@ router.get('/', getAllProduct);
 //mostrar un solo producto buscado por el id
 router.get('/:id', getProduct);
 //crear un producto
-router.post('/addproduct', addproduct);
+router.post('/', addproduct);
 
 //actualizar un producto
 router.put('/:id', updateProduct);
