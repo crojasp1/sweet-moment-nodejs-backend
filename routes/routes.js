@@ -7,8 +7,6 @@ const router = express.Router();
 //enrutamientos
 //mostrar todos los productos
 router.get('/', getAllProduct);
-//mostrar un solo producto buscado por el id
-router.get('/:id', getProduct);
 //crear un producto
 router.post('/', addproduct);
 
@@ -20,6 +18,8 @@ router.delete('/:id', deleteProduct);
 router.get('/popularinlenceria', getPopularInLenceria );
 //Obtener productos del carrito 
 router.post('/productosgetcart', getProductsInCart);
+//mostrar un solo producto buscado por el id
+router.get('/:id', getProduct);
 
 
 export default router;
